@@ -4,12 +4,32 @@ import android.inputmethodservice.InputMethodService;
 import android.inputmethodservice.Keyboard;
 import android.inputmethodservice.KeyboardView;
 import android.text.TextUtils;
+import android.view.View;
 import android.view.inputmethod.InputConnection;
 
 import java.util.regex.Pattern;
 
 public abstract class AbstractGermanicKeyboardIMS extends InputMethodService implements KeyboardView.OnKeyboardActionListener
 {
+    private boolean shift;
+    private KeyboardView keyboardView;
+    private Keyboard keyboard;
+
+    abstract int getKeyboardViewLayout();
+    abstract int getKeyboardXML();
+    abstract int getKeyboardShiftXML();
+
+
+    @Override
+    public View onCreateInputView()
+    {
+        keyboardView = (KeyboardView) getLayoutInflater().inflate(getKeyboardViewLayout(), null);
+        keyboard = new Keyboard(this, getKeyboardXML());
+        keyboardView.setKeyboard(keyboard);
+        keyboardView.setOnKeyboardActionListener(this);
+        return keyboardView;
+    }
+
     @Override
     public void onPress(int primaryCode)
     {
@@ -38,7 +58,22 @@ public abstract class AbstractGermanicKeyboardIMS extends InputMethodService imp
                         inputConnection.commitText("", 1);
                     }
                     break;
-                case -1 :
+                case Keyboard.KEYCODE_SHIFT:
+                    shift = !shift;
+                    if (shift)
+                    {
+                        keyboard=new Keyboard(this, getKeyboardShiftXML());
+                        keyboardView.setKeyboard(keyboard);
+                        keyboardView.setShifted(true);
+                        keyboardView.invalidateAllKeys();
+                    }
+                    else
+                    {
+                        keyboard=new Keyboard(this, getKeyboardXML());
+                        keyboardView.setKeyboard(keyboard);
+                        keyboardView.setShifted(true);
+                        keyboardView.invalidateAllKeys();
+                    }
                     break;
                 default :
                     char code = (char) primaryCode;

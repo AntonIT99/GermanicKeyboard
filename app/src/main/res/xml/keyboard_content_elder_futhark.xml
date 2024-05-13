@@ -5,7 +5,7 @@
     android:verticalGap="1dp"
     android:keyHeight="60dp">
 
-    <Row>
+    <Row android:rowEdgeFlags="top">
         <Key android:codes="5810" android:keyLabel="ᚲ q" android:keyEdgeFlags="left"/>
         <Key android:codes="5817" android:keyLabel="ᚹ w"/>
         <Key android:codes="5846" android:keyLabel="ᛖ e"/>
@@ -14,9 +14,9 @@
         <Key android:codes="5827" android:keyLabel="ᛃ y"/>
         <Key android:codes="5794" android:keyLabel="ᚢ u"/>
         <Key android:codes="5825" android:keyLabel="ᛁ i"/>
+        <Key android:codes="5831" android:keyLabel="ᛇ ï"/>
         <Key android:codes="5855" android:keyLabel="ᛟ o"/>
-        <Key android:codes="5832" android:keyLabel="ᛈ p"/>
-        <Key android:codes="5831" android:keyLabel="ᛇ ï" android:keyEdgeFlags="right"/>
+        <Key android:codes="5832" android:keyLabel="ᛈ p" android:keyEdgeFlags="right"/>
     </Row>
 
     <Row>
@@ -29,8 +29,7 @@
         <Key android:codes="5818" android:keyLabel="ᚺ h"/>
         <Key android:codes="5827" android:keyLabel="ᛃ j"/>
         <Key android:codes="5810" android:keyLabel="ᚲ k"/>
-        <Key android:codes="5850" android:keyLabel="ᛚ l"/>
-        <Key android:codes="5852" android:keyLabel="ᛜ ŋ" android:keyEdgeFlags="right"/>
+        <Key android:codes="5850" android:keyLabel="ᛚ l" android:keyEdgeFlags="right"/>
     </Row>
 
     <Row>
@@ -41,12 +40,13 @@
         <Key android:codes="5792" android:keyLabel="ᚠ v"/>
         <Key android:codes="5842" android:keyLabel="ᛒ b"/>
         <Key android:codes="5822" android:keyLabel="ᚾ n"/>
+        <Key android:codes="5852" android:keyLabel="ᛜ ŋ"/>
         <Key android:codes="5847" android:keyLabel="ᛗ m"/>
         <Key android:codes="5798" android:keyLabel="ᚦ þ"/>
         <Key android:codes="-5" android:keyLabel="⌫" android:keyWidth="125%p" android:isRepeatable="true" android:keyEdgeFlags="right"/>
     </Row>
 
-    <Row>
+    <Row android:rowEdgeFlags="bottom">
         <Key android:codes="5867" android:keyLabel="᛫" android:keyEdgeFlags="left"/>
         <Key android:codes="5868" android:keyLabel="᛬"/>
         <Key android:codes="13" android:keyLabel="" android:keyWidth="400%p" android:isRepeatable="true"/>

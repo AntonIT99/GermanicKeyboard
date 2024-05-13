@@ -7,11 +7,20 @@ import android.view.View;
 public class ElderFutharkIMS extends AbstractGermanicKeyboardIMS
 {
     @Override
-    public View onCreateInputView()
+    int getKeyboardViewLayout()
     {
-        KeyboardView keyboardView = (KeyboardView) getLayoutInflater().inflate(R.layout.keyboard_view, null);
-        keyboardView.setKeyboard(new Keyboard(this, R.xml.keyboard_content_elder_futhark));
-        keyboardView.setOnKeyboardActionListener(this);
-        return keyboardView;
+        return R.layout.keyboard_view;
+    }
+
+    @Override
+    int getKeyboardXML()
+    {
+        return R.xml.keyboard_content_elder_futhark;
+    }
+
+    @Override
+    int getKeyboardShiftXML()
+    {
+        return R.xml.keyboard_content_elder_futhark;
     }
 }
