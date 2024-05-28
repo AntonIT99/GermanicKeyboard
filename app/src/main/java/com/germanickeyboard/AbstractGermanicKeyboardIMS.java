@@ -9,22 +9,23 @@ import android.view.inputmethod.InputConnection;
 
 import java.util.regex.Pattern;
 
-public abstract class AbstractGermanicKeyboardIMS extends InputMethodService implements KeyboardView.OnKeyboardActionListener
+public abstract class AbstractGermanicKeyboardIMS extends InputMethodService implements KeyboardView.OnKeyboardActionListener, IGermanicKeyboardLayoutsXML
 {
-    private boolean shift;
     private KeyboardView keyboardView;
-    private Keyboard keyboard;
+    private Keyboard keyboard, shiftedKeyboard, secondaryKeyboard, shiftedSecondaryKeyboard;
+    protected boolean isSecondLayoutActive;
 
-    abstract int getKeyboardViewLayout();
-    abstract int getKeyboardXML();
-    abstract int getKeyboardShiftXML();
+    public abstract int getKeyboardViewLayout();
 
 
     @Override
     public View onCreateInputView()
     {
         keyboardView = (KeyboardView) getLayoutInflater().inflate(getKeyboardViewLayout(), null);
-        keyboard = new Keyboard(this, getKeyboardXML());
+        keyboard = new Keyboard(this, getKeyboardLayoutXML());
+        shiftedKeyboard = new Keyboard(this, getKeyboardShiftedLayoutXML());
+        secondaryKeyboard = new Keyboard(this, getKeyboardSecondLayoutXML());
+        shiftedSecondaryKeyboard = new Keyboard(this, getKeyboardShiftedSecondLayoutXML());
         keyboardView.setKeyboard(keyboard);
         keyboardView.setOnKeyboardActionListener(this);
         return keyboardView;
@@ -50,36 +51,53 @@ public abstract class AbstractGermanicKeyboardIMS extends InputMethodService imp
         {
             switch(primaryCode)
             {
+                case 0:
+                    break;
                 case Keyboard.KEYCODE_DELETE :
                     CharSequence selectedText = inputConnection.getSelectedText(0);
-                    if (TextUtils.isEmpty(selectedText)) {
+                    if (TextUtils.isEmpty(selectedText))
+                    {
                         inputConnection.deleteSurroundingText(1, 0);
-                    } else {
+                    }
+                    else
+                    {
                         inputConnection.commitText("", 1);
                     }
                     break;
                 case Keyboard.KEYCODE_SHIFT:
-                    shift = !shift;
-                    if (shift)
-                    {
-                        keyboard=new Keyboard(this, getKeyboardShiftXML());
-                        keyboardView.setKeyboard(keyboard);
-                        keyboardView.setShifted(true);
-                        keyboardView.invalidateAllKeys();
-                    }
-                    else
-                    {
-                        keyboard=new Keyboard(this, getKeyboardXML());
-                        keyboardView.setKeyboard(keyboard);
-                        keyboardView.setShifted(true);
-                        keyboardView.invalidateAllKeys();
-                    }
+                    keyboardView.setShifted(!keyboardView.isShifted());
+                    updateKeyboardView();
                     break;
-                default :
+                case Keyboard.KEYCODE_MODE_CHANGE:
+                    isSecondLayoutActive = !isSecondLayoutActive;
+                    updateKeyboardView();
+                    break;
+                default:
                     char code = (char) primaryCode;
                     inputConnection.commitText(String.valueOf(code), 1);
             }
         }
+    }
+
+    private void updateKeyboardView()
+    {
+        if (isSecondLayoutActive && keyboardView.isShifted())
+        {
+            keyboardView.setKeyboard(shiftedSecondaryKeyboard);
+        }
+        else if (isSecondLayoutActive)
+        {
+            keyboardView.setKeyboard(secondaryKeyboard);
+        }
+        else if (keyboardView.isShifted())
+        {
+            keyboardView.setKeyboard(shiftedKeyboard);
+        }
+        else
+        {
+            keyboardView.setKeyboard(keyboard);
+        }
+
     }
 
     @Override

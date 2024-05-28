@@ -1,9 +1,6 @@
 package com.germanickeyboard;
 
-import com.germanickeyboard.AbstractGermanicKeyboardIMS;
-import com.germanickeyboard.R;
-
-public class ElderFutharkIMS extends AbstractGermanicKeyboardIMS
+public class YoungerFutharkShortIMS extends AbstractGermanicKeyboardIMS
 {
     @Override
     public int getKeyboardViewLayout()
@@ -14,12 +11,12 @@ public class ElderFutharkIMS extends AbstractGermanicKeyboardIMS
     @Override
     public int getKeyboardLayoutXML()
     {
-        return R.xml.elder_futhark;
+        return R.xml.younger_futhark_short;
     }
 
     @Override
     public int getKeyboardSecondLayoutXML()
     {
-        return R.xml.elder_futhark_qwerty;
+        return R.xml.younger_futhark_short_qwerty;
     }
 }

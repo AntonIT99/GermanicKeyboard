@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="9%p"
+    android:horizontalGap="1%p"
+    android:verticalGap="5dp"
+    android:keyHeight="50dp">
+
+    <Row android:keyWidth="100%p" android:keyHeight="0%p">
+        <Key android:codes="0"/>
+    </Row>
+
+    <Row android:rowEdgeFlags="top">
+        <Key android:codes="5812" android:keyLabel="ᚴ q" android:keyEdgeFlags="left" android:horizontalGap="0.5%p"/>
+        <Key android:codes="5794" android:keyLabel="ᚢ w"/>
+        <Key android:codes="5825" android:keyLabel="ᛁ e" android:popupKeyboard="@xml/younger_futhark_popup_e"/>
+        <Key android:codes="5809" android:keyLabel="ᚱ r" android:popupKeyboard="@xml/younger_futhark_popup_r"/>
+        <Key android:codes="5839" android:keyLabel="ᛏ t" android:popupKeyboard="@xml/younger_futhark_popup_t"/>
+        <Key android:codes="5794" android:keyLabel="ᚢ y"/>
+        <Key android:codes="5794" android:keyLabel="ᚢ u"/>
+        <Key android:codes="5825" android:keyLabel="ᛁ i" android:popupKeyboard="@xml/elder_futhark_popup_i"/>
+        <Key android:codes="5804" android:keyLabel="ᚬ o" android:popupKeyboard="@xml/younger_futhark_popup_o"/>
+        <Key android:codes="5842" android:keyLabel="ᛒ p" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="5829" android:keyLabel="ᛅ a" android:popupKeyboard="@xml/younger_futhark_popup_a" android:keyEdgeFlags="left" android:horizontalGap="5.5%p"/>
+        <Key android:codes="5835" android:keyLabel="ᛋ s"/>
+        <Key android:codes="5839" android:keyLabel="ᛏ d" android:popupKeyboard="@xml/younger_futhark_popup_d"/>
+        <Key android:codes="5792" android:keyLabel="ᚠ f"/>
+        <Key android:codes="5812" android:keyLabel="ᚴ g"/>
+        <Key android:codes="5820" android:keyLabel="ᚼ h"/>
+        <Key android:codes="5829" android:keyLabel="ᛅ j"/>
+        <Key android:codes="5812" android:keyLabel="ᚴ k"/>
+        <Key android:codes="5850" android:keyLabel="ᛚ l" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="5862" android:keyLabel="ᛦ z" android:popupKeyboard="@xml/younger_futhark_popup_z" android:keyEdgeFlags="left" android:horizontalGap="4%p"/>
+        <Key android:keyOutputText="5812UU5835" android:keyLabel="ᚴᛋ x"/>
+        <Key android:codes="5812" android:keyLabel="ᚴ c"/>
+        <Key android:codes="5792" android:keyLabel="ᚠ v"/>
+        <Key android:codes="5794" android:keyLabel="ᚢ v"/>
+        <Key android:codes="5842" android:keyLabel="ᛒ b"/>
+        <Key android:codes="5822" android:keyLabel="ᚾ n" android:popupKeyboard="@xml/younger_futhark_popup_n"/>
+        <Key android:codes="5848" android:keyLabel="ᛘ m"/>
+        <Key android:codes="-5" android:keyLabel="⌫" android:keyWidth="12%p" android:isRepeatable="true" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row android:rowEdgeFlags="bottom" android:keyWidth="8%p">
+        <Key android:codes="-2" android:keyLabel="Qᴡᴇʀᴛʏ" android:keyEdgeFlags="left" android:keyWidth="20%p"/>
+        <Key android:codes="5867" android:keyLabel="᛫"/>
+        <Key android:codes="13" android:keyLabel="␣" android:keyWidth="37%p" android:isRepeatable="true"/>
+        <Key android:codes="5868" android:keyLabel="᛬"/>
+        <Key android:codes="5869" android:keyLabel="᛭"/>
+        <Key android:codes="10" android:keyLabel="↵" android:keyEdgeFlags="right" android:keyWidth="12%p"/>
+    </Row>
+</Keyboard>

@@ -4,7 +4,12 @@
     android:id="@+id/keyboard_view"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:keyPreviewLayout="@layout/key_preview"
     android:layout_alignParentBottom="true"
-    android:background="@color/colorPrimary">
+    android:layout_centerHorizontal="true"
+    android:keyPreviewLayout="@layout/key_preview"
+    android:keyTextColor="@color/keyText"
+    android:shadowColor="@android:color/transparent"
+    android:keyBackground="@drawable/key_background"
+    android:paddingVertical="10dp"
+    android:background="@drawable/keyboard_background">
 </android.inputmethodservice.KeyboardView>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="13%p"
+    android:horizontalGap="1%p"
+    android:verticalGap="5dp"
+    android:keyHeight="50dp">
+
+    <Row android:keyWidth="100%p" android:keyHeight="0%p">
+        <Key android:codes="0"/>
+    </Row>
+
+    <Row android:rowEdgeFlags="top">
+        <Key android:codes="5792" android:keyLabel="ᚠ f" android:keyEdgeFlags="left" android:horizontalGap="8.5%p"/>
+        <Key android:codes="5794" android:keyLabel="ᚢ u"/>
+        <Key android:codes="5798" android:keyLabel="ᚦ þ"/>
+        <Key android:codes="5805" android:keyLabel="ᚭ ą"/>
+        <Key android:codes="5809" android:keyLabel="ᚱ r"/>
+        <Key android:codes="5812" android:keyLabel="ᚴ k" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="5821" android:keyLabel="ᚽ h" android:keyEdgeFlags="left" android:horizontalGap="15.5%p"/>
+        <Key android:codes="5823" android:keyLabel="ᚿ n"/>
+        <Key android:codes="5825" android:keyLabel="ᛁ i"/>
+        <Key android:codes="5830" android:keyLabel="ᛆ a"/>
+        <Key android:codes="5836" android:keyLabel="ᛌ s" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="5840" android:keyLabel="ᛐ t" android:keyEdgeFlags="left" android:horizontalGap="1.5%p"/>
+        <Key android:codes="5843" android:keyLabel="ᛓ b"/>
+        <Key android:codes="5849" android:keyLabel="ᛙ m"/>
+        <Key android:codes="5850" android:keyLabel="ᛚ l"/>
+        <Key android:codes="5863" android:keyLabel="ᛧ ʀ"/>
+        <Key android:codes="5864" android:keyLabel="ᛨ ʀ"/>
+        <Key android:codes="-5" android:keyLabel="⌫" android:keyEdgeFlags="right" android:isRepeatable="true"/>
+    </Row>
+
+    <Row android:rowEdgeFlags="bottom" android:keyWidth="8%p">
+        <Key android:codes="-2" android:keyLabel="Fᴜᴛʜᴀʀᴋ" android:keyEdgeFlags="left" android:keyWidth="20%p"/>
+        <Key android:codes="5867" android:keyLabel="᛫"/>
+        <Key android:codes="13" android:keyLabel="␣" android:keyWidth="37%p" android:isRepeatable="true"/>
+        <Key android:codes="5868" android:keyLabel="᛬"/>
+        <Key android:codes="5869" android:keyLabel="᛭"/>
+        <Key android:codes="10" android:keyLabel="↵" android:keyEdgeFlags="right" android:keyWidth="12%p"/>
+    </Row>
+</Keyboard>

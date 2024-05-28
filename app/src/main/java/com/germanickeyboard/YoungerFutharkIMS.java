@@ -1,26 +1,25 @@
 package com.germanickeyboard;
 
-import android.inputmethodservice.Keyboard;
-import android.inputmethodservice.KeyboardView;
-import android.view.View;
+import com.germanickeyboard.AbstractGermanicKeyboardIMS;
+import com.germanickeyboard.R;
 
 public class YoungerFutharkIMS extends AbstractGermanicKeyboardIMS
 {
     @Override
-    int getKeyboardViewLayout()
+    public int getKeyboardViewLayout()
     {
         return R.layout.keyboard_view;
     }
 
     @Override
-    int getKeyboardXML()
+    public int getKeyboardLayoutXML()
     {
-        return R.xml.keyboard_content_younger_futhark;
+        return R.xml.younger_futhark;
     }
 
     @Override
-    int getKeyboardShiftXML()
+    public int getKeyboardSecondLayoutXML()
     {
-        return R.xml.keyboard_content_younger_futhark;
+        return R.xml.younger_futhark_qwerty;
     }
 }
