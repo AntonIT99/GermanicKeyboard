@@ -1,8 +1,5 @@
 package com.germanickeyboard;
 
-import com.germanickeyboard.AbstractGermanicKeyboardIMS;
-import com.germanickeyboard.R;
-
 public class ElderFutharkIMS extends AbstractGermanicKeyboardIMS
 {
     @Override

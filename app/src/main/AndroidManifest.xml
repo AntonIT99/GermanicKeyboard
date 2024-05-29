@@ -22,6 +22,18 @@
                 android:resource="@xml/method" />
         </service>
         <service
+            android:label="Germanic Modern Futhark"
+            android:name=".ModernFutharkIMS"
+            android:exported="true"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+        <service
             android:label="Anglo-Saxon Futhorc"
             android:name=".FuthorcIMS"
             android:exported="true"

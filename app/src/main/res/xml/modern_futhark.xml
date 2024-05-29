@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Keyboard xmlns:android="http://schemas.android.com/apk/res/android"
+    android:keyWidth="9%p"
+    android:horizontalGap="1%p"
+    android:verticalGap="5dp"
+    android:keyHeight="50dp">
+
+    <Row android:keyWidth="100%p" android:keyHeight="0%p">
+        <Key android:codes="0"/>
+    </Row>
+
+    <Row android:rowEdgeFlags="top">
+        <Key android:codes="5792" android:keyLabel="ᚠ f" android:keyEdgeFlags="left" android:horizontalGap="0.5%p"/>
+        <Key android:codes="5794" android:keyLabel="ᚢ u"/>
+        <Key android:codes="5798" android:keyLabel="ᚦ th"/>
+        <Key android:codes="5800" android:keyLabel="ᚨ a"/>
+        <Key android:codes="5809" android:keyLabel="ᚱ r"/>
+        <Key android:codes="5812" android:keyLabel="ᚴ k"/>
+        <Key android:codes="5815" android:keyLabel="ᚷ g"/>
+        <Key android:codes="5817" android:keyLabel="ᚹ w"/>
+        <Key android:codes="5793" android:keyLabel="ᚡ v"/>
+        <Key android:codes="5802" android:keyLabel="ᚪ ä" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="5820" android:keyLabel="ᛡ h" android:keyEdgeFlags="left" android:horizontalGap="0.5%p"/>
+        <Key android:codes="5822" android:keyLabel="ᚾ n"/>
+        <Key android:codes="5825" android:keyLabel="ᛁ i"/>
+        <Key android:codes="5828" android:keyLabel="ᛄ j"/>
+        <Key android:codes="5831" android:keyLabel="ᛇ ei"/>
+        <Key android:codes="5832" android:keyLabel="ᛈ p"/>
+        <Key android:codes="5795" android:keyLabel="ᚣ y"/>
+        <Key android:codes="5835" android:keyLabel="ᛋ s"/>
+        <Key android:codes="5856" android:keyLabel="ᛠ ja"/>
+        <Key android:codes="5807" android:keyLabel="ᚯ eu" android:keyEdgeFlags="right"/>
+    </Row>
+
+    <Row>
+        <Key android:codes="5839" android:keyLabel="ᛏ t" android:keyEdgeFlags="left" android:horizontalGap="0.5%p"/>
+        <Key android:codes="5842" android:keyLabel="ᛒ b"/>
+        <Key android:codes="5846" android:keyLabel="ᛖ e"/>
+        <Key android:codes="5848" android:keyLabel="ᛘ m"/>
+        <Key android:codes="5850" android:keyLabel="ᛚ l"/>
+        <Key android:codes="5853" android:keyLabel="ᛝ ng"/>
+        <Key android:codes="5855" android:keyLabel="ᛟ o"/>
+        <Key android:codes="5854" android:keyLabel="ᛞ d"/>
+        <Key android:codes="5811" android:keyLabel="ᚳ c"/>
+        <Key android:codes="-5" android:keyLabel="⌫" android:keyEdgeFlags="right" android:isRepeatable="true"/>
+    </Row>
+
+    <Row android:rowEdgeFlags="bottom" android:keyWidth="8%p">
+        <Key android:codes="-2" android:keyLabel="Fᴜᴛʜᴀʀᴋ" android:keyEdgeFlags="left" android:keyWidth="20%p"/>
+        <Key android:codes="5867" android:keyLabel="᛫"/>
+        <Key android:codes="13" android:keyLabel="␣" android:keyWidth="37%p" android:isRepeatable="true"/>
+        <Key android:codes="5868" android:keyLabel="᛬"/>
+        <Key android:codes="5869" android:keyLabel="᛭"/>
+        <Key android:codes="10" android:keyLabel="↵" android:keyEdgeFlags="right" android:keyWidth="12%p"/>
+    </Row>
+</Keyboard>
