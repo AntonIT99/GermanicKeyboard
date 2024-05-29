@@ -1,6 +1,6 @@
 package com.germanickeyboard;
 
-public class YoungerFutharkIMS extends AbstractGermanicKeyboardIMS
+public class MedievalFuthorkIMS extends AbstractGermanicKeyboardIMS
 {
     @Override
     public int getKeyboardViewLayout()
@@ -11,12 +11,12 @@ public class YoungerFutharkIMS extends AbstractGermanicKeyboardIMS
     @Override
     public int getKeyboardLayoutXML()
     {
-        return R.xml.younger_futhark;
+        return R.xml.medieval_futhork;
     }
 
     @Override
     public int getKeyboardSecondLayoutXML()
     {
-        return R.xml.younger_futhark_qwerty;
+        return R.xml.medieval_futhork_qwerty;
     }
 }

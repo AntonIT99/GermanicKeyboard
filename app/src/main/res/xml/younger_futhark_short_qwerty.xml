@@ -23,7 +23,7 @@
     </Row>
 
     <Row>
-        <Key android:codes="5829" android:keyLabel="ᛅ a" android:popupKeyboard="@xml/younger_futhark_short_popup_a" android:keyEdgeFlags="left" android:horizontalGap="5.5%p"/>
+        <Key android:codes="5830" android:keyLabel="ᛆ a" android:popupKeyboard="@xml/younger_futhark_short_popup_a" android:keyEdgeFlags="left" android:horizontalGap="5.5%p"/>
         <Key android:codes="5836" android:keyLabel="ᛌ s"/>
         <Key android:codes="5840" android:keyLabel="ᛐ d" android:popupKeyboard="@xml/younger_futhark_popup_d"/>
         <Key android:codes="5792" android:keyLabel="ᚠ f"/>

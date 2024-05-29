@@ -22,6 +22,18 @@
                 android:resource="@xml/method" />
         </service>
         <service
+            android:label="Anglo-Saxon Futhorc"
+            android:name=".FuthorcIMS"
+            android:exported="true"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+        <service
             android:label="Nordic Younger Futhark long-branch"
             android:name=".YoungerFutharkIMS"
             android:exported="true"
@@ -46,8 +58,8 @@
                 android:resource="@xml/method" />
         </service>
         <service
-            android:label="Anglo-Saxon Futhorc"
-            android:name=".FuthorcIMS"
+            android:label="Nordic Medieval Futhork"
+            android:name=".MedievalFuthorkIMS"
             android:exported="true"
             android:permission="android.permission.BIND_INPUT_METHOD">
             <intent-filter>
