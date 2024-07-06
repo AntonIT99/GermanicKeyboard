@@ -81,5 +81,29 @@
                 android:name="android.view.im"
                 android:resource="@xml/method" />
         </service>
+        <service
+            android:label="Armanen Runes"
+            android:name=".ArmanenRunesIMS"
+            android:exported="true"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
+        <service
+            android:label="Wiligut's Runes"
+            android:name=".WiligutRunesIMS"
+            android:exported="true"
+            android:permission="android.permission.BIND_INPUT_METHOD">
+            <intent-filter>
+                <action android:name="android.view.InputMethod" />
+            </intent-filter>
+            <meta-data
+                android:name="android.view.im"
+                android:resource="@xml/method" />
+        </service>
     </application>
 </manifest>
