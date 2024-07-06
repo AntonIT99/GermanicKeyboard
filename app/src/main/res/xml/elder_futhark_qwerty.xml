@@ -39,7 +39,7 @@
         <Key android:codes="5833" android:keyLabel="ᛉ z" android:keyEdgeFlags="left" android:horizontalGap="5.5%p"/>
         <Key android:keyOutputText="5810UU5835" android:keyLabel="ᚲᛋ x"/>
         <Key android:codes="5810" android:keyLabel="ᚲ c"/>
-        <Key android:codes="5817" android:keyLabel="ᚠ v"/>
+        <Key android:codes="5792" android:keyLabel="ᚠ v"/>
         <Key android:codes="5817" android:keyLabel="ᚹ v"/>
         <Key android:codes="5842" android:keyLabel="ᛒ b"/>
         <Key android:codes="5822" android:keyLabel="ᚾ n" android:popupKeyboard="@xml/elder_futhark_popup_n"/>
